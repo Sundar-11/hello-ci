@@ -7,7 +7,11 @@ pipeline {
                 echo 'Code checked out from GitHub'
             }
         }
-
+		stage('Package') {
+            steps {
+        echo 'Packaging artifacts'
+            }
+        }
         stage('Build') {
             steps {
                 echo 'Building the application'
