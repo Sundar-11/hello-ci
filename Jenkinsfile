@@ -1,18 +1,15 @@
 pipeline {
     agent any
+	
+	environment {
+	    APP_NAME = "HelloCI"
+	}
 
     stages {
         stage('Build') {
-            steps {
-                bat 'echo Building project...'
-                bat 'dir'
-            }
-        }
-
-        stage('Test') {
-            steps {
-                bat 'exit /b 1'
-            }
-        }
-    }
-}
+		    steps {
+			    bat "echo Building %APP_NAME%"
+			}
+		}
+	}
+}	
