@@ -11,7 +11,7 @@ pipeline {
 
         stage('Test') {
             steps {
-                bat 'echo Running tests...'
+                bat 'exit /b 1'
             }
         }
     }
