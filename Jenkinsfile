@@ -2,25 +2,16 @@ pipeline {
     agent any
 
     stages {
-        stage('Checkout') {
-            steps {
-                echo 'Code checked out from GitHub'
-            }
-        }
-		stage('Package') {
-            steps {
-        echo 'Packaging artifacts'
-            }
-        }
         stage('Build') {
             steps {
-                echo 'Building the application'
+                bat 'echo Building project...'
+                bat 'dir'
             }
         }
 
         stage('Test') {
             steps {
-                echo 'Running tests'
+                bat 'echo Running tests...'
             }
         }
     }
